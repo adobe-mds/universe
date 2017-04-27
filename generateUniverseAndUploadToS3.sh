@@ -11,7 +11,7 @@ S3KEY=$AWS_ACCESS_KEY_ID
 S3SECRET=$AWS_SECRET_ACCESS_KEY
 S3BUCKET=$S3_BUCKET
 S3STORAGETYPE="STANDARD" #REDUCED_REDUNDANCY or STANDARD etc.
-
+UNIVERSE_VERSION=$UNIVERSE_VERSION
 
 function putS3
 {
@@ -37,9 +37,9 @@ function putS3
 }
 
 echo 'Uploading to S3'
-putS3 "target" "repo-up-to-1.8.json" "/dcos-universe/1.8/"
+putS3 "target" "repo-up-to-1.8.json" "/dcos-universe/${UNIVERSE_VERSION}/1.8/"
 
-putS3 "target" "repo-up-to-1.9.json" "/dcos-universe/1.9/"
+putS3 "target" "repo-up-to-1.9.json" "/dcos-universe/${UNIVERSE_VERSION}/1.9/"
 
-putS3 "target" "repo-up-to-1.10.json" "/dcos-universe/1.10/"
+putS3 "target" "repo-up-to-1.10.json" "/dcos-universe/${UNIVERSE_VERSION}/1.10/"
 
