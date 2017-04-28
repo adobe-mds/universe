@@ -39,13 +39,15 @@ function putS3
 }
 
 generate_change_dcos_universe_post_data=$(
-  cat <<EOF
-	{"name":"MDS Universe","uri":"https://s3.amazonaws.com/${S3BUCKET}/dcos-universe/${UNIVERSE_VERSION}/1.8/repo-up-to-1.8.json","index":"1"} 
+cat <<eof
+{"name":"MDS Universe","uri":"https://s3.amazonaws.com/${S3BUCKET}/dcos-universe/${UNIVERSE_VERSION}/1.8/repo-up-to-1.8.json","index":"1"}
+eof
 )
 
 generate_remove_universe_post_data=$(
-  cat <<EOF
-	{"name":"MDS Universe"} 
+cat <<eof
+{"name":"MDS Universe"}
+eof
 )
 
 function change_dcos_repo
