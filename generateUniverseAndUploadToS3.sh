@@ -12,6 +12,8 @@ S3SECRET=$AWS_SECRET_ACCESS_KEY
 S3BUCKET=$S3_BUCKET
 S3STORAGETYPE="STANDARD" #REDUCED_REDUNDANCY or STANDARD etc.
 UNIVERSE_VERSION=$UNIVERSE_VERSION
+MDS_DCOS_URL=$MDS_DCOS_URL
+MDS_DCOS_TOKEN=$MDS_DCOS_TOKEN
 
 function putS3
 {
@@ -36,10 +38,24 @@ function putS3
     "https://$bucket.s3.amazonaws.com$aws_path$file"
 }
 
+function changeDcosRepo
+{
+		curl "${MDS_DCOS_URL}/package/repository/add?_timestamp=$(date +\"%s\")" \ 
+			-H "Authorization: token=${MDS_DCOS_TOKEN}" \ 
+			-H "Accept-Encoding: gzip, deflate" \
+			-H "Content-Type: application/vnd.dcos.package.repository.add-request+json;charset=UTF-8;version=v1" \ 
+			-H "Accept: application/vnd.dcos.package.repository.add-response+json;charset=utf-8;version=v1"	\ 
+			--data-binary "{\"name":\"MDS Universe\",\"uri\":\"https://s3.amazonaws.com/${S3BUCKET}/dcos-universe/${UNIVERSE_VERSION}/1.8/repo-up-to-1.8.json\",\"index\":\"1\"}" --compressed
+}
+
 echo 'Uploading to S3'
 putS3 "target" "repo-up-to-1.8.json" "/dcos-universe/${UNIVERSE_VERSION}/1.8/"
 
 putS3 "target" "repo-up-to-1.9.json" "/dcos-universe/${UNIVERSE_VERSION}/1.9/"
 
 putS3 "target" "repo-up-to-1.10.json" "/dcos-universe/${UNIVERSE_VERSION}/1.10/"
+
+echo "chaging universe url now."
+
+changeDcosRepo
 
