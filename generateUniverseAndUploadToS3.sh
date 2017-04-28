@@ -38,14 +38,21 @@ function putS3
     "https://$bucket.s3.amazonaws.com$aws_path$file"
 }
 
-function changeDcosRepo
+generate_post_data=$(
+  cat <<EOF
+	{"name":"MDS Universe","uri":"https://s3.amazonaws.com/${S3BUCKET}/dcos-universe/${UNIVERSE_VERSION}/1.8/repo-up-to-1.8.json","index":"1"} 
+)
+
+function change_dcos_repo
 {
-		curl "${MDS_DCOS_URL}/package/repository/add?_timestamp=$(date +\"%s\")" \ 
-			-H "Authorization: token=${MDS_DCOS_TOKEN}" \ 
-			-H "Accept-Encoding: gzip, deflate" \
-			-H "Content-Type: application/vnd.dcos.package.repository.add-request+json;charset=UTF-8;version=v1" \ 
-			-H "Accept: application/vnd.dcos.package.repository.add-response+json;charset=utf-8;version=v1"	\ 
-			--data-binary "{\"name":\"MDS Universe\",\"uri\":\"https://s3.amazonaws.com/${S3BUCKET}/dcos-universe/${UNIVERSE_VERSION}/1.8/repo-up-to-1.8.json\",\"index\":\"1\"}" --compressed
+		date=$(date +"%s")
+		Authorization="token=${MDS_DCOS_TOKEN}"
+		content_Type="application/vnd.dcos.package.repository.add-request+json;charset=UTF-8;version=v1"
+		Accept="application/vnd.dcos.package.repository.add-response+json;charset=utf-8;version=v1"
+		url="${MDS_DCOS_URL}/package/repository/add?_timestamp=$date"
+		
+		echo "$generate_post_data"
+		curl  -X POST -H "Authorization: $Authorization" -H "Content-Type: $content_Type" -H "Accept: $Accept" -d "$generate_post_data" $url 
 }
 
 echo 'Uploading to S3'
@@ -55,7 +62,7 @@ putS3 "target" "repo-up-to-1.9.json" "/dcos-universe/${UNIVERSE_VERSION}/1.9/"
 
 putS3 "target" "repo-up-to-1.10.json" "/dcos-universe/${UNIVERSE_VERSION}/1.10/"
 
-echo "chaging universe url now."
+echo "changing universe url now."
 
-changeDcosRepo
+change_dcos_repo
 
