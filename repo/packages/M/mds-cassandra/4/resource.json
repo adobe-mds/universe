@@ -1,0 +1,41 @@
+{
+  "assets": {
+    "uris": {
+      "scheduler-zip":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/scheduler.zip",
+      "executor-zip":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/executor.zip",
+      "jre-tar-gz":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/jre-8u121-linux-x64.tar.gz",
+      "apache-cassandra-bin-tar-gz":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/apache-cassandra-4-3.0.10-bin-dcos.tar.gz",
+      "libmesos-bundle-tar-gz": "https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/libmesos-bundle-1.9-argus-1.1.x-3.tar.gz"
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-large.png"
+  },
+  "cli":{
+    "binaries":{
+      "darwin":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"a864b29f22d004364599cdde0ac10e8dad980776a8ff268d860aa7d090312e18" } ],
+          "kind":"executable",
+          "url":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/dcos-cassandra-darwin"
+        }
+      },
+      "linux":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"9b276e00334b55568dc9e297e21f1ad5840e44c169bd1be74dcd97327946e60e" } ],
+          "kind":"executable",
+          "url":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/dcos-cassandra-linux"
+        }
+      },
+      "windows":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"e7e43903e3d561a70ed159a591b6295513b8f16b8994852794d1dfdeacf11977" } ],
+          "kind":"executable",
+          "url":"https://mds-dcos.s3.amazonaws.com/dcos-frameworks/mds-cassandra/4/dcos-cassandra.exe"
+        }
+      }
+    }
+  }
+}
