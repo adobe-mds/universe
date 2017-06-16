@@ -82,5 +82,5 @@ putS3 "target" "repo-up-to-1.10.json" "/dcos-universe/${UNIVERSE_VERSION}/1.10/"
 
 echo "changing universe url now."
 
-change_dcos_repo
+#change_dcos_repo
 
