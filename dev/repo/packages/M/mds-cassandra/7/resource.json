@@ -1,0 +1,41 @@
+{
+  "assets": {
+    "uris": {
+      "scheduler-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/scheduler.zip",
+      "executor-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/executor.zip",
+      "jre-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/jre-8u121-linux-x64.tar.gz",
+      "apache-cassandra-bin-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/apache-cassandra-7-3.0.10-bin-dcos.tar.gz",
+      "libmesos-bundle-tar-gz": "https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/libmesos-bundle-1.9-argus-1.1.x-3.tar.gz"
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-large.png"
+  },
+  "cli":{
+    "binaries":{
+      "darwin":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"f2e11bb1e8073a00442c9f590d8a2268ccdf78aa2ad54b65a672e62a4707b7c4" } ],
+          "kind":"executable",
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/dcos-cassandra-darwin"
+        }
+      },
+      "linux":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"3ff35bfeb7dc645d1647ea00731f2a8091af5c2afc537a6a3325d6ad66f45c40" } ],
+          "kind":"executable",
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/dcos-cassandra-linux"
+        }
+      },
+      "windows":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"20f14912f29427926d3879650147ee120bed372534516ed4b29878990a07c193" } ],
+          "kind":"executable",
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.0/dcos-cassandra.exe"
+        }
+      }
+    }
+  }
+}
