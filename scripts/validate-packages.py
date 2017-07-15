@@ -8,7 +8,10 @@ from distutils.version import LooseVersion
 
 SCRIPTS_DIR = os.path.dirname(os.path.realpath(__file__))
 UNIVERSE_DIR = os.path.join(SCRIPTS_DIR, "..")
-PKG_DIR = os.path.join(UNIVERSE_DIR, "repo/packages")
+
+ENVIRONMENT = os.environ.get('ENVIRONMENT', '')
+UNIVERSE_DIR_ENV = os.path.join(UNIVERSE_DIR, ENVIRONMENT)
+PKG_DIR = os.path.join(UNIVERSE_DIR_ENV, "repo/packages")
 SCHEMA_DIR = os.path.join(UNIVERSE_DIR, "repo/meta/schema")
 
 
