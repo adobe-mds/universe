@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 RELEASE_VERSION=$1

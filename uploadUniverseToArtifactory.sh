@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 UNIVERSE_PATH=$1
