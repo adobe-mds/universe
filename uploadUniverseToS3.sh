@@ -14,6 +14,6 @@ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 
 
 S3_URL="s3://${S3_BUCKET}/dcos/universe/${RELEASE_VERSION}"
-aws s3 --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.8.json  ${S3_URL}/repo-up-to-1.8.json
-aws s3 --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.9.json  ${S3_URL}/repo-up-to-1.9.json
-aws s3 --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.10.json  ${S3_URL}/repo-up-to-1.10.json
+aws s3 --acl public-read --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.8.json  ${S3_URL}/repo-up-to-1.8.json
+aws s3 --acl public-read --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.9.json  ${S3_URL}/repo-up-to-1.9.json
+aws s3 --acl public-read --content-type="application/vnd.dcos.universe.repo+json;charset=utf-8;version=v3" cp target/repo-up-to-1.10.json  ${S3_URL}/repo-up-to-1.10.json
