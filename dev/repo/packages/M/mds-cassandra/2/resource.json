@@ -1,0 +1,41 @@
+{
+  "assets": {
+    "uris": {
+      "scheduler-zip":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/scheduler.zip",
+      "executor-zip":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/executor.zip",
+      "jre-tar-gz":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/jre-8u121-linux-x64.tar.gz",
+      "apache-cassandra-bin-tar-gz":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/apache-cassandra-test-1.0.3-3.0.10-bin-dcos.tar.gz",
+      "libmesos-bundle-tar-gz": "https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/libmesos-bundle-1.9-argus-1.1.x-3.tar.gz"
+    }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-small.png",
+    "icon-medium": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-medium.png",
+    "icon-large": "https://downloads.mesosphere.com/cassandra-mesos/assets/cassandra-large.png"
+  },
+  "cli":{
+    "binaries":{
+      "darwin":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"8ab2faa8a7220c82caf5c96e42057c234ee45a70472472543231375eb793a5dd" } ],
+          "kind":"executable",
+          "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/dcos-cassandra-darwin"
+        }
+      },
+      "linux":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"8f3c03ea9052c3c38a5f4b561b1e06c1638f27d6bbb5ff8b9e9233c2e31073bf" } ],
+          "kind":"executable",
+          "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/dcos-cassandra-linux"
+        }
+      },
+      "windows":{
+        "x86-64":{
+          "contentHash":[ { "algo":"sha256", "value":"e799106ddbf8c54a8342705c17c6656f4bd0abb79fb70b8000868da23fa7cf43" } ],
+          "kind":"executable",
+          "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-1.0.3/dcos-cassandra.exe"
+        }
+      }
+    }
+  }
+}
