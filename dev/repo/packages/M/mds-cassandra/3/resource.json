@@ -17,21 +17,21 @@
     "binaries":{
       "darwin":{
         "x86-64":{
-          "contentHash":[ { "algo":"sha256", "value":"857f1e73a934fe3e92f35902d92fe909c082805bf0f5d6c1ca3adb230d2f9aed" } ],
+          "contentHash":[ { "algo":"sha256", "value":"5fd315a3e04f3a6b6bb34d3e05c9e918349a747974ff7475bc67a5a41abc3156" } ],
           "kind":"executable",
           "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/2.1.0/dcos-cassandra-darwin"
         }
       },
       "linux":{
         "x86-64":{
-          "contentHash":[ { "algo":"sha256", "value":"b0b2760974ecd385e98513bce78c29917687b2d9a95913a9cb8e1b90804e0a50" } ],
+          "contentHash":[ { "algo":"sha256", "value":"4b12d3119b002785444d4fa08f8137cda5d799354c1c3d48af6dc4f384f40a5e" } ],
           "kind":"executable",
           "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/2.1.0/dcos-cassandra-linux"
         }
       },
       "windows":{
         "x86-64":{
-          "contentHash":[ { "algo":"sha256", "value":"b83fb32f5e69cfeefbbecb40c13baf2181b609a9aef9d6370826fd7f222a1c51" } ],
+          "contentHash":[ { "algo":"sha256", "value":"3aab689f83a9e0ccc3379218683b3d58885c0161cd98ba0b458b1f95c9e8ae06" } ],
           "kind":"executable",
           "url":"https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/2.1.0/dcos-cassandra.exe"
         }
