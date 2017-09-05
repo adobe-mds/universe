@@ -1,7 +1,7 @@
 {
   "packagingVersion": "3.0",
   "name": "mds-cassandra",
-  "version": "1.0.2",
+  "version": "test-break-release",
   "maintainer": "support@mesosphere.io",
   "minDcosReleaseVersion": "1.7",
   "description": "Apache Cassandra running on DC/OS",

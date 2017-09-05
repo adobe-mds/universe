@@ -1,11 +1,11 @@
 {
   "assets": {
     "uris": {
-      "scheduler-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/scheduler.zip",
-      "executor-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/executor.zip",
-      "jre-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/jre-8u121-linux-x64.tar.gz",
-      "apache-cassandra-bin-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/apache-cassandra-1.0.2-3.0.10-bin-dcos.tar.gz",
-      "libmesos-bundle-tar-gz": "https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/libmesos-bundle-1.9-argus-1.1.x-3.tar.gz"
+      "scheduler-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/scheduler.zip",
+      "executor-zip":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/executor.zip",
+      "jre-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/jre-8u121-linux-x64.tar.gz",
+      "apache-cassandra-bin-tar-gz":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/apache-cassandra-test-break-release-3.0.10-bin-dcos.tar.gz",
+      "libmesos-bundle-tar-gz": "https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/libmesos-bundle-1.9-argus-1.1.x-3.tar.gz"
     }
   },
   "images": {
@@ -19,21 +19,21 @@
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"76389a93b7dce151be6877d0e089efd469588bc5e450dcc29bfe8bcc50a94d35" } ],
           "kind":"executable",
-          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/dcos-cassandra-darwin"
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/dcos-cassandra-darwin"
         }
       },
       "linux":{
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"11c73dd2a0152986af9fba18e324081c0810454114cba52cf3ab67826f8accd4" } ],
           "kind":"executable",
-          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/dcos-cassandra-linux"
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/dcos-cassandra-linux"
         }
       },
       "windows":{
         "x86-64":{
           "contentHash":[ { "algo":"sha256", "value":"f608a7985ab6e1147d498d96cd1000f5b8e532002e5c9206c68e73d2c03b4294" } ],
           "kind":"executable",
-          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/1.0.2/dcos-cassandra.exe"
+          "url":"https://prjindal-cal-bucket.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-break-release/dcos-cassandra.exe"
         }
       }
     }
