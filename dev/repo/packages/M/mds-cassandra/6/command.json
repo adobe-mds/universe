@@ -1,5 +1,0 @@
-{
-  "pip": [
-    "https://mds-dev.s3.amazonaws.com/dcos/frameworks/mds-cassandra/test-.0.1/bin_wrapper-0.0.1-py2.py3-none-any.whl"
-  ]
-}
